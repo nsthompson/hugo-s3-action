@@ -1,7 +1,7 @@
-FROM pahud/awscli-v2:node-lts
+FROM amazon/aws-cli:latest
 
 RUN yum update -y && \
-    yum install -y curl jq git
+    yum install -y jq git tar gzip
 
 COPY entrypoint.sh /
 

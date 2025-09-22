@@ -4,7 +4,7 @@ GitHub action to run `hugo deploy` provided there is an S3 target configured in 
 
 ## Usage
 
-```
+```yaml
 name: Hugo S3
 
 on:
@@ -15,13 +15,13 @@ on:
 
 jobs:
   build:
-    
+
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out master
         uses: actions/checkout@master
-          
+
       - name: Deploy site
         uses: nsthompson/hugo-s3-action@v1.5.0
         env:
